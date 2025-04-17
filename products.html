@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">SimpleShop</h1>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart 🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="products-section">
+    <div class="overlay">
+      <h2>Explore Our Latest Collection</h2>
+      <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product-card">
+          <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="Shoes" />
+          <h3>Stylish Shoes</h3>
+          <p>Trendy and comfy shoes, ideal for casual and formal wear.</p>
+          <span>$37.00</span>
+          <button onclick="addToCart(1, 'Stylish Shoes', 37.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="Accessories" />
+          <h3>Elegant Accessories</h3>
+          <p>Accessories that complete your look with finesse and charm.</p>
+          <span>$15.00</span>
+          <button onclick="addToCart(2, 'Elegant Accessories', 15.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="https://i.postimg.cc/Dfj5VBcz/sunglasses1.jpg" alt="Sunglasses" />
+          <h3>SunGuard Shades</h3>
+          <p>Classic sunglasses to protect your eyes & elevate your style.</p>
+          <span>$10.00</span>
+          <button onclick="addToCart(3, 'SunGuard Shades', 10.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="Bag" />
+          <h3>Fashion Bag</h3>
+          <p>Minimalist leather bag for your essentials with classy touch.</p>
+          <span>$20.00</span>
+          <button onclick="addToCart(4, 'Fashion Bag', 20.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="T-Shirt" />
+          <h3>White T-Shirt</h3>
+          <p>Soft cotton regular fit t-shirt for everyday comfort.</p>
+          <span>$12.00</span>
+          <button onclick="addToCart(5, 'White T-Shirt', 12.00)">Add to Cart</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function addToCart(id, name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingItem = cart.find(item => item.id === id);
+
+      if (existingItem) {
+        existingItem.qty += 1; // Increment quantity if the product already exists
+      } else {
+        cart.push({ id, name, price, qty: 1 }); // Add new product with id
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      console.log("Cart Data:", cart); // Debugging
+      alert(name + " added to cart!");
+    }
+  </script>
+
+</body>
+</html>

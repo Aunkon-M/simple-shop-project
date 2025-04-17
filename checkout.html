@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Enter Shipping Info</h2>
+    <form action="checkout.php" method="POST">
+      <input type="text" name="fullname" placeholder="Full Name" required /><br />
+      <input type="text" name="address" placeholder="Address" required /><br />
+      <input type="email" name="email" placeholder="Email" required /><br />
+      <input type="hidden" name="cart" id="cartData" />
+      <button type="submit">Confirm Order</button>
+    </form>
+  </div>
+
+  <script>
+    const cartData = localStorage.getItem("cart");
+    console.log("Cart Data Sent to Server:", JSON.parse(cartData)); // Debugging
+    document.getElementById("cartData").value = cartData;
+  </script>
+</body>
+</html>

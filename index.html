@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SimpleShop - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <?php session_start(); ?>
+  <!-- 🌐 Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">SimpleShop</h1>
+      <nav class="navbar" id="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products📦</a>
+        <a href="contact.html">Contact📞</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="login.html" class="login-btn">Login🔐</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🏠 Hero Section -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h2>Discover Your Style</h2>
+      <p>Explore premium fashion, accessories & more. Trendy, affordable, and uniquely you!</p>
+      <a href="products.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- 💬 Testimonials -->
+  <section class="testimonials">
+    <h3>What Our Customers Say</h3>
+    <div class="testimonial-box">
+      <div class="testimonial">
+        <p>"Amazing quality! Got my delivery in just 2 days!"</p>
+        <h5>- Afiya Rahman</h5>
+      </div>
+      <div class="testimonial">
+        <p>"I love the stylish design. Super comfy and affordable."</p>
+        <h5>- Salman Kabir</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📩 Newsletter -->
+  <section class="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <p>Be the first to hear about offers, updates and trends!</p>
+    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!')">
+      <input type="email" placeholder="Enter your email" required />
+      <button>Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ⚡ Footer -->
+  <footer>
+    <p>&copy; 2025 SimpleShop. All rights reserved.</p>
+  </footer>
+</body>
+</html>

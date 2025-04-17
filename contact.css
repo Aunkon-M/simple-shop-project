@@ -1,0 +1,111 @@
+/* styles.css */
+
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #433e3e;
+  }
+  
+  /* Header with black background */
+  header {
+    background-color: #1f1f1f;
+    padding: 20px 40px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(23, 22, 22, 0.1);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: #f0c040;
+  }
+  
+  /* Contact Form */
+  .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #222;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #1e90ff;
+    outline: none;
+  }
+  
+  form button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #0e70d1;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar {
+      margin-top: 10px;
+    }
+  
+    .form-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  
